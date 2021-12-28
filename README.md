@@ -1,2 +1,2 @@
 # txt-cmp-eval
-Library for text comparison to evaluation
+Library for text comparison to evaluation.
