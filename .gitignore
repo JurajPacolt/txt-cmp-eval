@@ -5,5 +5,7 @@
 .DS_Store
 .idea
 *.tmp
+README.md.backup
 /build
 /target
+/test
