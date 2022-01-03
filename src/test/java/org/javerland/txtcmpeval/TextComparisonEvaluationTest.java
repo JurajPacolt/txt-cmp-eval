@@ -1,38 +1,17 @@
 package org.javerland.txtcmpeval;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * @author Juraj Pacolt (juraj.pacolt@gmail.com)
+ * @since 03.01.2021
  */
-public class TextComparisonEvaluationTest 
-    extends TestCase
+public class TextComparisonEvaluationTest
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public TextComparisonEvaluationTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( TextComparisonEvaluationTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
+    @Test
     public void testTextComparisonEvaluation()
     {
-        assertTrue( true );
+        Assert.assertTrue(true);
     }
 }
