@@ -20,7 +20,7 @@ public class WordComparison extends BasicCommonProperties implements Comparison 
     @Override
     public double compare(String word, String comparedWord) {
 
-        // If're  both null result is 1.0 or 100%.
+        // If're both null result is 1.0 or 100%.
         if (isNull(word) && isNull(comparedWord)) {
             return 1.0d;
         }
