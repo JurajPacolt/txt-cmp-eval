@@ -29,7 +29,7 @@ public class WordComparison extends BasicCommonProperties implements Comparison 
         String w1 = nonNull(word) ? stripAccentIfNeeded(word) : EMPTY_STRING;
         String w2 = nonNull(comparedWord) ? stripAccentIfNeeded(comparedWord) : EMPTY_STRING;
 
-        // TODO ... Now we need to stretch the strings to together length ...
+        // TODO ... Now we need to stretch the strings to same length ...
         // It's not only about change the length. 
         // Equaling characters in strings must be moved to equals positions 
         // for better evaluation.
