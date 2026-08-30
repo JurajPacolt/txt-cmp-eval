@@ -62,7 +62,7 @@ Every flag can be set by constructor or by its setter.
 	<dependency>
 	  <groupId>org.javerland</groupId>
 	  <artifactId>txt-cmp-eval</artifactId>
-	  <version>26.3.1</version>
+	  <version>26.3.2</version>
 	</dependency>
 
 ## Examples of using
@@ -213,13 +213,13 @@ sentence and two changed words decrease it to a half, because a half of the word
 
 Class `TextComparison` has an entry point for comparing of two texts or two files:
 
-	java -cp txt-cmp-eval-26.3.1.jar;commons-lang3-3.12.0.jar org.javerland.txtcmpeval.TextComparison first.txt second.txt
+	java -cp txt-cmp-eval-26.3.2.jar;commons-lang3-3.12.0.jar org.javerland.txtcmpeval.TextComparison first.txt second.txt
 
 	97 % (0.975)
 
 Arguments which aren't paths to existing files are compared as texts:
 
-	java -cp txt-cmp-eval-26.3.1.jar;commons-lang3-3.12.0.jar org.javerland.txtcmpeval.TextComparison "Dnes je pekny den" "Dnes je pkeny den"
+	java -cp txt-cmp-eval-26.3.2.jar;commons-lang3-3.12.0.jar org.javerland.txtcmpeval.TextComparison "Dnes je pekny den" "Dnes je pkeny den"
 
 	95 % (0.95)
 

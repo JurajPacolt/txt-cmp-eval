@@ -4,7 +4,7 @@
 
   <groupId>org.javerland</groupId>
   <artifactId>txt-cmp-eval</artifactId>
-  <version>26.3.1</version>
+  <version>26.3.2</version>
   <name>txt-cmp-eval</name>
   <description>Text Comparison to Evaluation Java library</description>
   <packaging>jar</packaging>
