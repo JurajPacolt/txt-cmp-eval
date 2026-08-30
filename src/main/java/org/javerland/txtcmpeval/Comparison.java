@@ -17,6 +17,18 @@ public interface Comparison {
      * multiply with 100.0 .
      */
     double compare(String str, String comparedStr);
+
+    /**
+     * Percentage comparison of two strings, result is directly percentage
+     * value.
+     *
+     * @param str First string.
+     * @param comparedStr String compared to.
+     * @return Result from 0 to 100.
+     */
+    default int compareToPercentage(String str, String comparedStr) {
+        return calculateToPercentage(compare(str, comparedStr));
+    }
     
     /**
      * Helper static method for calculate result to percentage value.
