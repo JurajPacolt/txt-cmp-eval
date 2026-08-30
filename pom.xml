@@ -8,6 +8,22 @@
   <name>txt-cmp-eval</name>
   <description>Text Comparison to Evaluation Java library</description>
   <packaging>jar</packaging>
+  <url>https://github.com/JurajPacolt/txt-cmp-eval</url>
+
+  <developers>
+    <developer>
+      <id>jurajpacolt</id>
+      <name>Juraj Pacolt</name>
+      <email>juraj.pacolt@gmail.com</email>
+      <url>https://github.com/JurajPacolt</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/JurajPacolt/txt-cmp-eval.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/JurajPacolt/txt-cmp-eval.git</developerConnection>
+    <url>https://github.com/JurajPacolt/txt-cmp-eval</url>
+  </scm>
 
   <licenses>
     <license>
@@ -83,7 +99,7 @@
     </dependency>
   </dependencies>
 
-  <!-- Signing and deploying to the central repository, it's used by
+  <!-- Signing and deploying to the Maven Central Portal, it's used by
        "mvn clean deploy -Prelease" only, so a common build doesn't need
        a GPG key. -->
   <profiles>
@@ -94,7 +110,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.4</version>
+            <version>3.2.8</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
@@ -106,14 +122,17 @@
             </executions>
           </plugin>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.3</version>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>0.11.0</version>
             <extensions>true</extensions>
             <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+              <!-- Credentials of the "central" server of settings.xml, it means
+                   the user token of the Central Portal account. -->
+              <publishingServerId>central</publishingServerId>
+              <!-- Deployment waits in the portal for manual publishing, because
+                   a published version can't be changed or deleted any more. -->
+              <autoPublish>false</autoPublish>
             </configuration>
           </plugin>
         </plugins>
